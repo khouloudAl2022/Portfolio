@@ -8,12 +8,12 @@ const Computers = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
-   <mesh>
-    <hemisphereLight intensity={0.15} groundColor={black}/>
-    <pointLight intensity={1}/>
-   </mesh>
+    <mesh>
+      <hemisphereLight intensity={0.15} groundColor={black} />
+      <pointLight intensity={1} />
+      <primitive object={computer.scene} />
+    </mesh>
   );
 };
-
 
 export default ComputersCanvas;
