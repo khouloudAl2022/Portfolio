@@ -16,6 +16,7 @@ import {
   figma,
   docker,
   meta,
+  express,
   starbucks,
   tesla,
   shopify,
@@ -105,12 +106,8 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: "Express JS",
+    icon: express,
   },
 ];
 

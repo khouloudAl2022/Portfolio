@@ -30,6 +30,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import circleImg from "./circle.png";
+import express from "./tech/express.png";
 
 export {
   circleImg,
@@ -37,6 +38,7 @@ export {
   backend,
   creator,
   mobile,
+  express,
   web,
   github,
   menu,
