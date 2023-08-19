@@ -8,7 +8,7 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
-    <mesh>
+    <mesh >
       <hemisphereLight intensity={2} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
@@ -22,7 +22,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        position={isMobile ? [0, -3, -2.2] : [0, -4, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -56,13 +56,13 @@ const ComputersCanvas = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader />} >
+      <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile}  />
       </Suspense>
 
       <Preload all />

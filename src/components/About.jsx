@@ -26,7 +26,22 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 const About = () => {
   return (
-    <>
+    <div style={{ paddingTop: "1%" }}>
+       <div className="relative xs:bottom-0 bottom-32 w-full flex  justify-center items-center">
+        <a href="#about">
+          <div className="w-[30px] h-[60px] mb-0 rounded-3xl border-2 border-secondary flex justify-center items-start p-1  mb-8">
+            <motion.div
+              animate={{ y: [0, 24, 0] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
+          </div>
+        </a>
+      </div>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -45,7 +60,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
